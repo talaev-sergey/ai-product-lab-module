@@ -12,7 +12,7 @@ GIGACHAT_API_KEY = os.getenv("GIGACHAT_API_KEY", "ВСТАВИТЬ КЛЮЧ").st
 
 # --- Инициализация ---
 # Инициализируем клиент GigaChat с учетными данными
-# verify_ssl_certs=False отключает проверку SSL-сертификатов (не рекомендуется в продакшене)
+# verify_ssl_certs=False отключает проверку SSL-сертификатов
 client = GigaChat(credentials=GIGACHAT_API_KEY, verify_ssl_certs=False)
 # Инициализируем Telegram-бота
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
@@ -196,7 +196,6 @@ def default_handler(message):
         reply_markup=main_keyboard()
     )
 
-# --- Точка входа ---
 if __name__ == '__main__':
     print("=" * 50)
     print("🤖 Бот-помощник по выбору подарков")
